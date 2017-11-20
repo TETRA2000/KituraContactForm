@@ -22,3 +22,8 @@ RUN if [ "$bx_dev_user" != root ]; then useradd -ms /bin/bash -u $bx_dev_userid 
 
 # Bundle application source & binaries
 COPY . /swift-project
+
+WORKDIR /swift-project
+RUN swift build
+
+CMD [".build/debug/KituraContactForm"]
