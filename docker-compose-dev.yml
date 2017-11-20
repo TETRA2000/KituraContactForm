@@ -1,0 +1,13 @@
+# Example usages
+# $ docker-compose -f docker-compose-dev.yml run --rm webapp swift build
+
+version: '3'
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile-tools
+    volumes:
+      - .:/swift-project
+    ports:
+      - "8080:8080"
