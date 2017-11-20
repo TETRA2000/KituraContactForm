@@ -1,5 +1,6 @@
 import Foundation
 import Kitura
+import KituraCORS
 import LoggerAPI
 import Configuration
 import CloudEnvironment

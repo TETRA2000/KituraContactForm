@@ -1,4 +1,4 @@
 module memplugin {
-    umbrella "/Users/takahiko/repo/KituraContactForm/.build/checkouts/omr-agentcore-1826539389957424207/src/memplugin/include"
+    umbrella "/swift-project/.build/checkouts/omr-agentcore--3540956265925174615/src/memplugin/include"
     export *
 }
