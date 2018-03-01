@@ -10,10 +10,12 @@ let package = Package(
       .package(url: "https://github.com/IBM-Swift/Configuration.git", .upToNextMinor(from: "1.0.0")),
       .package(url: "https://github.com/RuntimeTools/SwiftMetrics.git", from: "2.0.0"),
       .package(url: "https://github.com/IBM-Swift/Health.git", from: "0.0.0"),
+      .package(url: "https://github.com/IBM-Swift/Swift-Kuery", .upToNextMinor(from: "1.0.0")),
+      .package(url: "https://github.com/IBM-Swift/Swift-Kuery-ORM", .upToNextMinor(from: "0.0.1")),
     ],
     targets: [
       .target(name: "KituraContactForm", dependencies: [ .target(name: "Application"), "Kitura" , "HeliumLogger"]),
-      .target(name: "Application", dependencies: [ "Kitura", "Configuration", "CloudEnvironment","SwiftMetrics","Health",      ]),
+      .target(name: "Application", dependencies: [ "Kitura", "Configuration", "CloudEnvironment","SwiftMetrics","Health", "SwiftKueryORM"]),
 
       .testTarget(name: "ApplicationTests" , dependencies: [.target(name: "Application"), "Kitura","HeliumLogger" ])
     ]
