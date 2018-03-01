@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "CMySQL",
+        "repositoryURL": "https://github.com/IBM-Swift/CMySQL.git",
+        "state": {
+          "branch": null,
+          "revision": "a9e4da59475b5db72434a0eaa9d1fb53858ad447",
+          "version": "0.1.2"
+        }
+      },
+      {
         "package": "Configuration",
         "repositoryURL": "https://github.com/IBM-Swift/Configuration.git",
         "state": {
@@ -186,8 +195,17 @@
         "repositoryURL": "https://github.com/IBM-Swift/Swift-Kuery.git",
         "state": {
           "branch": null,
-          "revision": "3bbaaccf7ce332147ec4f7aed69b5691ebb06617",
-          "version": "1.2.0"
+          "revision": "fc4bbd00a98334bb8b916a43299e38ae8437356a",
+          "version": "1.0.2"
+        }
+      },
+      {
+        "package": "SwiftKueryMySQL",
+        "repositoryURL": "https://github.com/IBM-Swift/SwiftKueryMySQL",
+        "state": {
+          "branch": null,
+          "revision": "fdbf2fbb592043d84499911c6ea06a28c56a4a98",
+          "version": "1.0.2"
         }
       },
       {
