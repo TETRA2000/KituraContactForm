@@ -4,14 +4,15 @@ import PackageDescription
 let package = Package(
     name: "KituraContactForm",
     dependencies: [
-      .package(url: "https://github.com/IBM-Swift/Kitura.git", .upToNextMinor(from: "2.0.0")),
+      .package(url: "https://github.com/IBM-Swift/Kitura.git", .upToNextMinor(from: "2.2.0")),
       .package(url: "https://github.com/IBM-Swift/HeliumLogger.git", .upToNextMinor(from: "1.7.1")),
-      .package(url: "https://github.com/IBM-Swift/CloudEnvironment.git", .upToNextMinor(from: "4.0.5")),
-      .package(url: "https://github.com/IBM-Swift/Configuration.git", .upToNextMinor(from: "1.0.0")),
-      .package(url: "https://github.com/RuntimeTools/SwiftMetrics.git", from: "2.0.0"),
-      .package(url: "https://github.com/IBM-Swift/Health.git", from: "0.0.0"),
-      .package(url: "https://github.com/IBM-Swift/SwiftKueryMySQL", .upToNextMinor(from: "1.0.0")),
-      .package(url: "https://github.com/IBM-Swift/Swift-Kuery-ORM", .upToNextMinor(from: "0.0.1")),
+      .package(url: "https://github.com/IBM-Swift/CloudEnvironment.git", .upToNextMinor(from: "7.0.0")),
+      .package(url: "https://github.com/IBM-Swift/Configuration.git", .upToNextMinor(from: "3.0.0")),
+      .package(url: "https://github.com/RuntimeTools/SwiftMetrics.git", from: "2.2.1"),
+      .package(url: "https://github.com/IBM-Swift/Health.git", from: "1.0.0"),
+      .package(url: "https://github.com/IBM-Swift/SwiftKueryMySQL.git", .upToNextMinor(from: "1.0.0")),
+      .package(url: "https://github.com/IBM-Swift/Swift-Kuery-ORM.git", .upToNextMinor(from: "0.0.1")),
+      .package(url: "https://github.com/IBM-Swift/Swift-Kuery.git", .branch("master")),
       // 
     ],
     targets: [
