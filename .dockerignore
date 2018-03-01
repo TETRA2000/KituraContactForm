@@ -1,2 +1,7 @@
 Dockerfile
 Dockerfile-tools
+
+.DS_Store
+/.build
+/Packages
+/*.xcodeproj
