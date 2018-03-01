@@ -2,12 +2,12 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ibmcom/swift-ubuntu-runtime:4.0
+      - image: swift:4.0
     steps:
-      - checkout
       - run:
           name: Install system level packages
           command: apt-get update && apt-get install -y libmysqlclient-dev
+      - checkout
       - run:
           name: Install dependencies
           command: swift package resolve
