@@ -22,6 +22,7 @@ public class App {
 
         // Endpoints
         initializeHealthRoutes(app: self)
+        initializePerson(app: self)
     }
 
     public func run() throws {
