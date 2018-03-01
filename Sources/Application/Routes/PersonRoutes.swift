@@ -1,45 +1,34 @@
 import LoggerAPI
+import SwiftKueryORM
 
 func initializePerson(app: App) {
     app.router.get("/person") { request, response, _ in
-        if let connection = OrmUtil.instance.connection() {
+        if let connection = OrmUtil.sharedInstance.connect() {
+            Database.default = Database(single: connection)
+
             let person = Person(name: "Joe", age: 38)
             person.save { p, error in
                 if let error = error {
-                    response.send("Failed to save.")
-                    next()
-                    return
+                    try? response.send("Failed to save. \(error)").end()
                 }
             }
 
             Person.findAll { array, error in
                 if let error = error {
-                    response.send("Failed to findAll.")
-                    next()
-                    return
+                    try? response.send("Failed to findAll. \(error)").end()
                 }
 
                 if let array = array {
-                    response.send("Result = \(array)")
-                    next()
-                    return
+                    try? response.send("Result = \(array)").end()
                 } else {
                     // FIXME necessary?
-                    response.send("Result is empty.")
-                    next()
-                    return
+                    try? response.send("Result is empty.").end()
                 }
-                
-
             }
-
         } else {
-            response.send("Failed to connect to DB.")
-            next()
-            return
+            try response.send("Failed to connect to DB.").end()
         }
 
-        response.send("Hmm??")
-        next()
+        try response.send("Hmm??").end()
     }
 }

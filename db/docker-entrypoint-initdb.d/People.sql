@@ -1,0 +1,1 @@
+CREATE TABLE People (name VARCHAR(20), age INTEGER);
