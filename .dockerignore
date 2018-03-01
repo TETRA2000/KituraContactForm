@@ -1,6 +1,6 @@
 Dockerfile
 Dockerfile-tools
-
+/.git
 .DS_Store
 /.build
 /Packages
